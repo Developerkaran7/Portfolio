@@ -1,0 +1,669 @@
+/* changing :default html setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Applying font for html */
+html {
+    font-size: 100%;
+}
+
+/* Add Google Fonts Poppins to project */
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    /* website scroll smooth */
+    scroll-behavior: smooth;
+    background-color: #0d0d0d;
+
+}
+
+
+/* Apply all fonts to body */
+body {
+    font-size: 1rem;
+}
+
+/* styling container */
+.container {
+    /* To Center  */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* styling a tag */
+a {
+    text-decoration: none;
+    color: rgb(228, 216, 216);
+}
+
+/* Styling the header */
+header {
+    background: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.477);
+}
+
+/* styling nav bar  */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    padding: 0.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+/* Adding height to nav */
+nav li {
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    /* it will be visible when hover */
+    /* width: 100%; */
+    width: 0;
+    height: 3px;
+    background: blue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    /* Adding transition effect */
+    transition: 0.3s;
+}
+
+/* Hover effect  */
+
+nav ul li a:hover::after {
+    /* it will visible that line after hover the cursor */
+    width: 100%;
+}
+
+/* styling logo */
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: blue;
+    margin-right: 170px;
+}
+
+/* styling hero */
+#home {
+    /* background: #0d0d0d; */
+    padding: 0.5rem 0;
+
+}
+
+#home .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home .container img {
+    width: 270px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.hero_content {
+    display: grid;
+    place-items: center;
+}
+
+/* Styling home page Read More and Download MY Resume button */
+.ul-list-1 li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+}
+
+.hero_btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(76, 18, 202);
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.hero_btn:hover {
+    background-color: green;
+}
+
+/* styling Social Media icon */
+.ul-list li {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 25px;
+    color: white;
+    padding: 10px 10px;
+}
+
+.fa-brands {
+    padding: 10px 10px;
+}
+
+.ul-list li:hover {
+    background-color: green;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    border: none;
+
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hi_text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.name_text {
+    font-size: 4rem;
+    color: blue;
+}
+
+
+.iam_text {
+    font-size: 4rem;
+    color: black;
+}
+
+#home h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    /* The typewriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+
+}
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: blue;
+    }
+}
+
+/* Project sections */
+#Project {
+    background: rgb(0, 0, 0);
+
+}
+
+#Project h2 {
+    font-size: 2rem;
+    color: rgb(249, 249, 249);
+    text-align: center;
+    margin-bottom: 20px;
+    /* Adding animation */
+    background: linear-gradient(90deg, #000, #4eb235, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        background-position: -400%;
+
+    }
+
+    100% {
+        background-position: 500%;
+    }
+
+}
+
+#Project h3 {
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.grid_item {
+    display: grid;
+    place-items: center;
+}
+
+.project_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.card_content {
+    padding: 1rem;
+    position: relative;
+    top: -2.5rem;
+    margin-bottom: -2.5rem;
+    transition: 0.5s ease-in-out;
+    transform: translateY(-1px)
+}
+
+
+.card :hover .card_content {
+    background: blue;
+    transform: translateY(0px);
+
+}
+
+.card_content h3 {
+    text-align: center;
+}
+
+
+/* Styling MY skills page */
+
+
+#Services {
+    padding: 30px 0;
+    background: #0d0d0d;
+    color: white;
+}
+
+#Services h2 {
+    /* Adding animation */
+    background: linear-gradient(90deg, #000, #4eb235, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+}
+
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-gap: 2rem;
+    margin-top: 2rem; */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    border-right: 8px;
+    /* Adding transition effect */
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.services-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services_h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+}
+
+/* Adding Hover Effect  */
+
+.services-list div:hover {
+    transform: translateY(-30px);
+
+}
+
+
+/* Styling My-work sections */
+
+#my_work {
+    background: rgb(0, 0, 0);
+    padding: 50px 0;
+}
+
+.my_work_h1 {
+    color: blue;
+    font-size: 2rem;
+    text-align: center;
+    /* ADDING ANIMATIONS */
+    background: linear-gradient(90deg, #000, #4eb235, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+}
+
+.work_list img {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s;
+
+
+}
+
+
+.work_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+
+
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Adding some information over the images */
+/* Styling layer  */
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), blue);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 10;
+    overflow: hidden;
+
+}
+
+.layer h3 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+
+@keyframes animate {
+    0% {
+        background-position: -400%;
+
+    }
+
+    100% {
+        background-position: 500%;
+    }
+
+}
+
+
+
+.layer p {
+    color: white;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    /* Adding Transition */
+    transition: height 0.5s;
+}
+
+
+
+
+/* Adding Hover Effect */
+.work:hover img {
+    transform: scale(1.1);
+}
+
+/* Display hide content after hover effect */
+/* Increasing the hight after hover effect */
+.work:hover .layer {
+    height: 100%;
+}
+
+/* Styling the a tag button */
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: solid blue;
+    padding: 15px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    /* Adding Transition for background */
+    transition: background 0.5s;
+}
+
+/* Adding Hover Effect  */
+
+.btn:hover {
+    transform: scale(1.1);
+    /* ADDING ANIMATIONS */
+    background: linear-gradient(90deg, #000, #4eb235, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+}
+
+/* 
+Creating Contact Me form */
+
+#contact {
+    background: #0d0d0d;
+
+}
+
+.contact-title {
+    color: black;
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+}
+
+.contact-title h1 {
+    font-size: 30px;
+    line-height: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.contact-me {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.contact-title h2 {
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+form {
+    margin-top: 30px;
+    transition: all 4s ease-in-out;
+}
+
+.form-control {
+    width: 700px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+
+input {
+    height: 50px;
+}
+
+form .submit {
+    background: blue;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form .submit:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.contact-form form {
+    display: grid;
+    place-items: center;
+}
+
+
+
+textarea {
+    resize: none;
+}
+
+#msg {
+    color: rgb(59, 4, 237);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    /* padding: 10px; */
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+}
+
+/* Footer */
+
+footer {
+    background-color: black;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+/* Changing Scrollbar  */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#642bff, #33b712);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#642bff, #33b712);
+}
